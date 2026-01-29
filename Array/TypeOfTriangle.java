@@ -9,13 +9,18 @@ public class TypeOfTriangle {
         for (int i = 0; i < 3; i++) {
             nums[i] = sc.nextInt();
         }
-        if (nums[0] == nums[1] && nums[1] == nums[2]) {
-            System.out.println("Equilateral");
-        } else if (nums[0] == nums[1] || nums[0] == nums[2] || nums[1] == nums[2]) {
-            System.out.println("Isosceles");
+        if (nums[0] + nums[1] > nums[2] && nums[0] + nums[2] > nums[1] && nums[2] + nums[1] > nums[0]) {
+            if (nums[0] == nums[1] && nums[1] == nums[2]) {
+                System.out.println("Equilateral");
+            } else if (nums[0] == nums[1] || nums[0] == nums[2] || nums[1] == nums[2]) {
+                System.out.println("Isosceles");
+            } else {
+                System.out.println("Scalene");
+            }
         } else {
-            System.out.println("Scalene");
+            System.out.println("None");
         }
+
     }
 
 }
